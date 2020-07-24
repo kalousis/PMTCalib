@@ -45,7 +45,7 @@ double fit_func_fft( const double *x )
       if ( yy0[i]>0 ) result += pow( val-yy0[i], 2.0 )/( yy0[i] );
             
     }
-    
+  if (params0[0] < params0[2]) result += N*params0[2]/params0[0];  
   return result;
   
 }
